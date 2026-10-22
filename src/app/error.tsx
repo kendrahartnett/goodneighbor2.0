@@ -1,0 +1,1 @@
+"use client"; export default function Error(){return <section className="shell"><div className="page-hero"><p className="eyebrow">GOODNEIGHBOR</p><h1>Something went wrong</h1><p>Please try again shortly.</p></div></section>}

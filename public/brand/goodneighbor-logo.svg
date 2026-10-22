@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" role="img" aria-labelledby="title desc">
+  <title id="title">GoodNeighbor</title>
+  <desc id="desc">A forest green neighborhood roof around a terracotta heart, above the GoodNeighbor wordmark.</desc>
+  <circle cx="320" cy="62" r="55" fill="#DFE9DD"/>
+  <path d="m282 57 38-32 38 32M294 53v45m52-45v45" fill="none" stroke="#244B3C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M320 88c-9-7-20-14-20-23a12 12 0 0 1 20-8 12 12 0 0 1 20 8c0 9-11 16-20 23Z" fill="#C87555"/>
+  <text x="320" y="172" text-anchor="middle" fill="#244B3C" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700" letter-spacing="-2">goodneighbor</text>
+  <text x="320" y="205" text-anchor="middle" fill="#244B3C" font-family="Arial, sans-serif" font-size="15" letter-spacing="6">FIND YOUR WAY TO GIVE BACK</text>
+</svg>

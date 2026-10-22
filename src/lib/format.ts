@@ -1,0 +1,1 @@
+export function formatChicagoDate(date: Date | null, dateType: string) { if (dateType === "ONGOING") return "Ongoing"; return date ? new Intl.DateTimeFormat("en-US", { timeZone:"America/Chicago", dateStyle:"medium", timeStyle:"short" }).format(date) : "Contact organizer"; }

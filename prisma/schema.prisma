@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum OpportunityStatus {
+  DRAFT
+  PUBLISHED
+}
+
+enum DateType {
+  ONGOING
+  DATE_SPECIFIC
+  NEXT_OCCURRENCE
+}
+
+enum Category {
+  FOOD_SECURITY
+  ENVIRONMENT
+  YOUTH_COMMUNITY
+  HOUSING_HEALTH
+  ANIMAL_WELFARE
+  SKILLS_BASED_VIRTUAL
+  PUBLIC_SAFETY
+}
+
+model Opportunity {
+  id String @id @default(cuid())
+  slug String @unique
+  title String
+  organizationName String
+  summary String @db.VarChar(280)
+  description String
+  category Category
+  neighborhood String
+  addressText String?
+  phoneNumber String?
+  volunteerPositions String?
+  dateType DateType
+  startsAt DateTime?
+  endsAt DateTime?
+  timeZone String @default("America/Chicago")
+  commitmentText String?
+  accessibilityText String?
+  eligibilityText String?
+  imageUrl String?
+  imageAlt String?
+  organizerUrl String
+  sourceUrl String
+  verifiedAt DateTime
+  status OpportunityStatus @default(DRAFT)
+  publishedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([status])
+  @@index([status, publishedAt, id])
+  @@index([category])
+  @@index([verifiedAt])
+}
+
+model ListingRequest {
+  id String @id @default(cuid())
+  name String
+  contactInformation String
+  email String
+  description String
+  photoUrl String?
+  createdAt DateTime @default(now())
+  archivedAt DateTime?
+
+  @@index([createdAt, id])
+  @@index([archivedAt, createdAt, id])
+}

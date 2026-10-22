@@ -1,0 +1,1 @@
+import Link from "next/link"; export default function NotFound(){return <section className="shell"><div className="page-hero"><p className="eyebrow">CHICAGO VOLUNTEERING</p><h1>Not found</h1><p>This opportunity may no longer be published.</p><Link className="button" href="/opportunities">Browse opportunities</Link></div></section>}
